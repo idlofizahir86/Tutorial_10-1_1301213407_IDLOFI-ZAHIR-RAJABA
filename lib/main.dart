@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'tutorial_11_1_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -174,6 +176,30 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                 ),
+              ), // Navigation text
+              const SizedBox(height: 20),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Tutorial11Page()),
+                  );
+                },
+                child: Container(
+                    height: 60,
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(40)),
+                    child: const Center(
+                      child: Text(
+                        "Go to Tutorial 11-1",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    )),
               ),
             ],
           ),
